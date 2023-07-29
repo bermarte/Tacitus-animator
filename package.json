@@ -1,0 +1,16 @@
+{
+  "name": "tacitus",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "check-directory-and-run": "node runCommandIfDirectoryExists.js",
+    "dev": "npm run check-directory-and-run && node app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

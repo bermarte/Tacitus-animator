@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Execute Node.js Script</title>
+  </head>
+  <body>
+    <h1>Click the button to execute the Node.js script</h1>
+    <button id="executeButton">Execute</button>
+
+    <script>
+      // Attach a click event listener to the button
+      document.getElementById("executeButton").addEventListener("click", () => {
+        // Make a POST request to the server to trigger the Node.js script execution
+        fetch("/executeScript", { method: "POST" })
+          .then((response) => response.text())
+          .then((message) => alert(message))
+          .catch((error) => console.error("Error:", error));
+      });
+    </script>
+  </body>
+</html>
